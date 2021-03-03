@@ -1,4 +1,4 @@
-### Data visualization in React using a Bubble Chart
+### Data visualization in React using a Bubble Chart with Drag and Drop
 
 #### React Chartjs library
 
