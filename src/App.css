@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+td {
+  padding: 3px 0 !important;
+}
+
+body {
+  font-family: 'Roboto', sans-serif !important;
+
+  background: whitesmoke;
+}
+
+#chartjs-tooltip {
+  font-family: 'Roboto', sans-serif !important;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-radius: 5px;
+  font-size: 0.7rem;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 50px auto;
+  width: 98%;
+  gap: 20px
+}
+
+.chart {
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+
+.x-axis {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px;
+  border: 0.5px solid rgba(75, 192, 192, 0.4);
+  border-radius: 4px;
+  margin: 10px 0;
+  font-size: 0.7rem;
+}
+
+.x-axis div {
+  font-size: 0.5rem;
+}
+
+.y-axis-wrap {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  display: flex;
+  width: 100%;
+}
+
+.y-axis {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  border: 0.5px solid rgba(75, 192, 192, 0.4);
+  border-radius: 4px;
+  padding: 12px 0;
+  width: 28px
+}
+
+.y-axis div {
+  transform: rotate(-90deg);
+  font-size: 0.5rem;
+}
+
+
+.section-2 {
+  margin: 20px 0;
+}
+
+.color {
+  display: flex;
+  align-items: center;
+  border: 0.5px solid rgba(75, 192, 192, 0.4);
+  padding: 10px;
+  font-size: 0.8rem;
+  margin: 10px 0;
+}
+
+.color div:first-child {
+  font-size: 0.6rem;
+}
+
+.inner-flex-1 {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.inner-flex-2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inner-flex-2 div {
+  font-size: 0.6rem;
+}
+
+.range {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.range div {
+  width: 50px;
+  height: 10px;
+}
+
+.size {
+  display: flex;
+  align-items: center;
+  border: 0.5px solid rgba(75, 192, 192, 0.4);
+  padding: 10px;
+  font-size: 0.8rem;
+  margin-top: 10px;
+}
+
+.size div:first-child {
+  font-size: 0.6rem;
+}
+
+.inner-flex-3 {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.inner-flex-4 {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.inner-flex-4 div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.6rem;
+  margin-left: 3px;
+}
+
+.inner-flex-4 span {
+  margin-left: 2px;
+}
+
+.bubble {
+  border-radius: 50%;
+  background: rgba(75, 192, 192, 0.4);
+}
+
+.bubble.first {
+  height: 20px;
+  width: 20px;
+}
+
+.bubble.second {
+  height: 25px;
+  width: 25px;
+}
+
+.bubble.third {
+  height: 30px;
+  width: 30px;
+}
+
+.bubble.fourth {
+  height: 35px;
+  width: 35px;
+}
+
+.bubble.fifth {
+  height: 40px;
+  width: 40px;
+}
+
+.form {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.form-item p {
+  font-size: bold;
+  margin-bottom: -10px;
+  font-size: 0.9rem;
+}
+
+.form-item {
+  margin: 10px 0;
+}
+
+select {
+  padding: 10px;
+  border: 0.5px solid rgba(75, 192, 192, 0.4);
+  width: 100%;
+  border-radius: 5px;
+}
+
+.metrics {
+  margin: 15px 0;
+}
+
+.metrics h4 {
+  font-size: 0.8rem;
+}
+
+
+.metrics small {
+  font-size: 0.6rem;
+}
+
+.tabs div {
+  background: whitesmoke;
+  padding: 0 10px;
+  border-radius: 5px;
+  margin: 5px 0;
+  font-size: 0.7rem;
+  cursor: grab;
+  display: flex;
+  align-items: center;
+}
+
+.tabs img {
+  height: 20px;
+  width: 20px;
+  margin-right: 8px;
+}
+
+@media only screen and (min-width: 700px) {
+  main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+}
+
+@media only screen and (min-width: 1200px) {
+  main {
+    width: 80%;
+  }
+
+  .y-axis {
+    padding: 25px 0;
+    width: 40px;
+  }
+
+  .x-axis {
+    padding: 15px;
+  }
+
+  .x-axis div {
+    font-size: 0.7rem;
+  }
+
+  .y-axis div {
+    font-size: 0.7rem;
+  }
+
+  .range div {
+    width: 100px;
+  }
+
+  .inner-flex-1 {
+    margin-left: 20px;
+  }
+
+  .inner-flex-3 {
+    margin-left: 20px;
+  }
+
+  .inner-flex-4 div {
+    margin: 0 15px;
+  }
+
+  .tabs div {
+    padding: 12px 5px;
+    margin: 7px 0;
+    font-size: 0.8rem;
+  }
+
+}
