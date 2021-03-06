@@ -4,8 +4,10 @@ import { chartData, region, sector } from "../utils/data";
 import { others, readableName } from "../utils/helpers";
 import { ColorSize } from "./ColorSize";
 import { Select } from "./Select";
+// import Chart from "chart.js";
 
 function BubbleChart() {
+  // Chart.defaults.global.legend.display = false;
   //select input states
   const [dataRegion, setRegion] = useState("Africa");
   const [dataSector, setSector] = useState("Agriculture");
@@ -53,6 +55,32 @@ function BubbleChart() {
 
   //chart options - SKIPPPPP
   const options = {
+    // responsive: true,
+    // maintainAspectRatio: false,
+    legend: false,
+    scales: {
+      xAxes: [
+        {
+          // ticks: { display: false },
+          gridLines: {
+            // display: false,
+            // drawBorder: false,
+          },
+        },
+      ],
+      yAxes: [
+        {
+          ticks: {
+            //  display: false,
+            lineHeight: 3,
+          },
+          gridLines: {
+            // display: false,
+            // drawBorder: false,
+          },
+        },
+      ],
+    },
     tooltips: {
       callbacks: {
         label: function (tooltipItem) {
@@ -233,7 +261,7 @@ function BubbleChart() {
       const sum = filteredData.reduce((a, c) => a + c[size], 0);
       //convert the costs to 100% and use as radius
       let radius = (filteredData[i][size] / sum) * 100;
-      obj["r"] = radius.toFixed(2);
+      obj["r"] = (radius + 10).toFixed(2);
 
       arr.push(obj);
       obj = {};

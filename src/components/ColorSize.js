@@ -1,7 +1,7 @@
 import React from "react";
 import { readableName } from "../utils/helpers";
 
-export const ColorSize = ({ color, size, allowDrop, drop }) => {
+export const ColorSize = React.memo(({ color, size, allowDrop, drop }) => {
   return (
     <section className="section-2">
       <div className="color" onDrop={drop} onDragOver={allowDrop}>
@@ -54,4 +54,4 @@ export const ColorSize = ({ color, size, allowDrop, drop }) => {
       </div>
     </section>
   );
-};
+});

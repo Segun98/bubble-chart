@@ -1,5 +1,6 @@
 export let others = {
   label: "Comparative Landscape",
+  fill: false,
 };
 
 //Make the text displayed readable and not the raw json object key
