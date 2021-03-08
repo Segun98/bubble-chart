@@ -72,7 +72,7 @@ function BubbleChart() {
         {
           ticks: {
             //  display: false,
-            lineHeight: 3,
+            lineHeight: 1.8,
           },
           gridLines: {
             // display: false,
@@ -261,7 +261,7 @@ function BubbleChart() {
       const sum = filteredData.reduce((a, c) => a + c[size], 0);
       //convert the costs to 100% and use as radius
       let radius = (filteredData[i][size] / sum) * 100;
-      obj["r"] = (radius + 10).toFixed(2);
+      obj["r"] = (radius + 5).toFixed(2);
 
       arr.push(obj);
       obj = {};
